@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* funky animation */
+/* experiment with the color */
+@keyframes becomeColorful {
+    0%   {background-color: red;}
+    25%  {background-color:yellow;}
+    50%  {background-color:green;}
+    75%  {background-color:brown;}
+    100% {background-color: red;}
+}
+
+@keyframes slide {
+    from {
+        transform: rotateX(-360deg) rotateY(-360deg) rotateZ(-360deg);
+        transition: 400ms;
+        
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        transition: 400ms;
+    }
+}
+
+.grid-element.funky {
+    animation: slide 3s, becomeColorful 3s;
+    animation-iteration-count: infinite;
+}
+
+/* funky animation ends */
+
+
+
+/* media queries */
+/* xs */
+@media (min-width: 475px) {}
+
+/* sm */
+@media (min-width: 640px) {}
+
+/* md */
+@media (min-width: 768px) {}
+
+/* lg */
+@media (min-width: 1024px) {}
+
+/* xl */
+@media (min-width: 1280px) {}
+
+/* 2xl */
+@media (min-width: 1536px) {}  
