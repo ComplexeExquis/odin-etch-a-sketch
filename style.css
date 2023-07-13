@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "JacquesFrancois-Regular";
+    src: url("./assets/fonts/JacquesFrancois-Regular.ttf");
+}
+
 html {
     box-sizing: border-box;
 }
@@ -39,19 +44,121 @@ html {
 /* funky animation ends */
 
 
+body {
+    background-color: #FFE9D0;
+    margin: 0;
+}
+
+h1, 
+p {
+    margin: 0;
+}
+
+.container {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* logo section */
+.mobile-logo {
+    min-height: 3.5rem;
+    max-width: 16rem;
+}
+
+.desktop-logo-container {
+    margin-top: 2.25rem;
+    display: none; /* becomes flex if on tablet or desktop */
+    gap: 1rem;
+}
+
+.desktop-title {
+    display: flex; 
+    font-family: "JacquesFrancois-Regular";
+    font-size: 4.5rem;
+    max-width: 6ch;
+    color: #B65700;
+    align-items: end;
+    -webkit-text-stroke: 1px black;
+}
+/* end of logo section */
+
+
+
+/* canvas section */
+.canvas-and-buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 15rem;
+    height: 15rem;
+    box-shadow: 1px 2px 10px rgb(88, 88, 88);
+}
+
+.grid-element {
+    background-color: white;
+}
+
+
+/* end of canvas section */
+
 
 /* media queries */
-/* xs */
-@media (min-width: 475px) {}
+@media (min-width: 320px) {
+    .mobile-logo {
+        min-height: 4rem;
+        max-width: 20rem;
+    }
+    .grid {
+        width: 16rem;
+        height: 16rem;
+    }
+
+}
+
+/* xs tablet and beyond*/
+@media (min-width: 475px) {
+    .mobile-logo {
+        min-height: 5rem;
+        max-width: 24rem;
+    }
+
+    .grid {
+        width: 20rem;
+        height: 20rem;
+    }
+}
 
 /* sm */
-@media (min-width: 640px) {}
+@media (min-width: 640px) {
+    .mobile-logo {
+        min-height: 5.5rem;
+        max-width: 25.5rem;
+    }
+ 
+}
 
-/* md */
-@media (min-width: 768px) {}
+/* md  
+desktop and beyond 
+desktop layout
+*/
+@media (min-width: 768px) {
+
+}
 
 /* lg */
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+   
+}
 
 /* xl */
 @media (min-width: 1280px) {}
