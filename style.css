@@ -79,7 +79,7 @@ p {
 .desktop-title {
     display: flex; 
     font-family: "JacquesFrancois-Regular";
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     max-width: 6ch;
     color: #B65700;
     align-items: end;
@@ -172,12 +172,6 @@ input {
     width: 9rem;
 }
 
-.input[type="range" i]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 1rem;
-    height: 1rem;
-}
-
 .slider-text {
     color: #B65700;
     font-size: 1rem;
@@ -254,6 +248,16 @@ input {
         max-width: 25.5rem;
     }
 
+    .grid {
+        width: 26rem;
+        height: 26rem;
+    }
+
+    .single-and-rainbow-btn-container,
+    .funky-and-clear-canvas-btn-container {  
+        width: 24rem; 
+    }
+
  
 }
 
@@ -262,16 +266,54 @@ desktop and beyond
 desktop layout
 */
 @media (min-width: 768px) {
+    .mobile-logo {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .grid {
+        width: 24rem;
+        height: 24rem;
+    }
+
+
+    .desktop-logo-container {
+        display: flex;
+    }
+
+    .desktop-logo-and-buttons-container {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .single-and-rainbow-btn-container,
+    .funky-and-clear-canvas-btn-container { 
+        margin-top: 1rem; 
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        max-width: 12ch;
+    }
+
+    .rainbow-color {
+        width: 9.5ch;
+    }
+
+    
+    .clear-canvas {
+        width: 9.5ch;
+    }
+
+    #slider-input {
+        width: 10rem;
+    }
 
 }
-
-/* lg */
-@media (min-width: 1024px) {
-   
-}
-
-/* xl */
-@media (min-width: 1280px) {}
-
-/* 2xl */
-@media (min-width: 1536px) {}  
