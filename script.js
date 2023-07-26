@@ -71,9 +71,9 @@ function pickColorHandler(event) {
     deleteOldGrid();
     renderGrid();
 }
-function singlecolor() {
+function singlecolor(event) {
     coloringMode = "singleColor";
-    
+    colorRightNow = event.target.firstChild.value;
     removeClickedClassFromBtns();
     singleColorBtn.classList.add("clicked");
 
