@@ -63,17 +63,20 @@ function deleteOldGrid() {
 
 // 2. give functionality to all buttons
 function pickColorHandler(event) {
-    singlecolor();
     colorRightNow = event.target.value;
 
-    
+    singlecolor();
 
     deleteOldGrid();
     renderGrid();
 }
 function singlecolor(event) {
     coloringMode = "singleColor";
-    colorRightNow = event.target.firstChild.value;
+    
+    if(event.target.hasChildNodes()){
+        colorRightNow = event.target.querySelector(".color-input").value;
+    }
+    
     removeClickedClassFromBtns();
     singleColorBtn.classList.add("clicked");
 
